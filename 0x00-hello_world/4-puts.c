@@ -1,6 +1,7 @@
-#!/bin/bash 
 #include <stdio.h>
+
 /*main program */
+
 int main(void)
 {
 	printf("Programming is like building a multilingual puzzle");
