@@ -1,23 +1,21 @@
 #include <stdio.h>
 
 /**
- * main - Prints numbers between 0 to 9 and letters between a to f.
+ * main - Prints the lowercase alphabet in reverse.
  *
  * Return: Always 0 (Success)
  */
+
 int main(void)
 {
-	int i;
+	char letter;
 
-	for (i = 48; i < 58; i++)
+	for (letter = 'z'; letter >= 'a'; letter--)
 	{
-		putchar(i);
+		putchar(letter);
 	}
-	for (i = 97; i < 103; i++)
-	{
-		putchar(i);
-	}
+
 	putchar('\n');
+
 	return (0);
 }
-
