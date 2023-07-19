@@ -1,31 +1,23 @@
 #include <stdio.h>
 
 /**
- * main - finds and prints the sum of the even-valued terms
- * followed by a new line
+ * main - Computes and prints the sum of all the multiples of 3 or 5 below 1024 (excluded)
+ *
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int i;
-	unsigned long int j, k, next, sum;
+    int limit = 1024;
+    int sum = 0;
 
-	j = 1;
-	k = 2;
-	sum = 0;
+    for (int num = 0; num < limit; num++)
+    {
+        if (num % 3 == 0 || num % 5 == 0)
+        {
+            sum += num;
+        }
+    }
 
-	for (i = 1; i <= 33; ++i)
-	{
-		if (j < 4000000 && (j % 2) == 0)
-		{
-			sum = sum + j;
-		}
-		next = j + k;
-		j = k;
-		k = next;
-	}
-
-	printf("%lu\n", sum);
-
-	return (0);
+    printf("The sum of all multiples of 3 or 5 below 1024 is: %d\n", sum);
+    return (0);
 }
